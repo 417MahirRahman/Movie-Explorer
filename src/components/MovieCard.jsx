@@ -15,15 +15,28 @@ const MovieCard = ({ movie }) => {
         <div className="card-body">
           <h2 className="card-title">{movie.name}</h2>
           <div>
-            <p>Rating: {movie.rating?.average ?? "N/A"}</p>
-            <p>Released Date: {movie.premiered}</p>
+            <p className="py-1">
+              <span className="font-bold flex items-center">
+                Rating:
+                <img
+                  src="/star-solid-full.svg"
+                  alt="star"
+                  className="w-6 h-6"
+                />
+                <span className="font-normal">{movie.rating?.average}</span>
+              </span>
+            </p>
+            <p className="py-1">
+              <span className="font-bold">Released Date: </span>
+              {movie.premiered}
+            </p>
           </div>
           <div className="card-actions justify-end">
             <button
-              className="btn"
+              className="btn btn-neutral"
               onClick={() => document.getElementById(`${movie.id}`).showModal()}
             >
-              More Details
+              See Details
             </button>
           </div>
         </div>
