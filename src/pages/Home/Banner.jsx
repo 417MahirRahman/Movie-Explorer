@@ -17,12 +17,11 @@ const HeroBanner = () => {
   return (
     <div>
       <div className="relative flex items-center justify-center overflow-hidden bg-gray-900 mx-10 my-5 px-10 py-20 rounded-lg">
-        {/* Background with gradient overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+              "url(./bg.jpg)",
           }}
         >
           {/* Dark gradient overlay */}

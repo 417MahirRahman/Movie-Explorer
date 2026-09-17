@@ -1,16 +1,48 @@
-# React + Vite
+# Movie Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for discovering and searching TV shows/movies, built on top of the [TVmaze API](https://www.tvmaze.com/api). Users can browse a curated selection of shows on the home page, search the full catalog, and view detailed information about each show in a modal.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [movie-explorar.vercel.app](https://movie-explorar.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Hero Banner** — landing section that showcases the first 16 shows from the TVmaze catalog.
+- **Search** — live search across all TVmaze shows via the `/search/shows` endpoint.
+- **Show Details Modal** — click "More Details" on any show card to view its image, genres, language, rating, release date, and summary.
+- **Responsive Grid** — show cards are laid out in a responsive grid (2 columns on mobile, up to 5 on large screens).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** — component-based UI
+- **React Router** — client-side routing (e.g. `/allMovies`)
+- **Tailwind CSS + daisyUI** — styling and pre-built UI components (`card`, `modal`, `input`, `btn`)
+- **TVmaze API** — public API providing show data (no API key required)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── HeroBanner.jsx    # Landing hero section with first 16 shows + CTA
+│   ├── MovieCard.jsx      # Individual show card (poster, title, rating, modal trigger)
+│   ├── Modal.jsx          # Show details modal (genres, language, summary, etc.)
+│   └── SearchBar.jsx      # Controlled search input
+├── pages/
+│   └── All_Movies.jsx     # Full show listing page with search
+```
+
+## Getting Started
+
+### Installation
+
+```bash
+git clone https://github.com/417MahirRahman/Movie-Explorer.git
+cd Movie-Explorer
+npm install
+```
+
+### Running the app
+
+```bash
+npm run dev
+```
