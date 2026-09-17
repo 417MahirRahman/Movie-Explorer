@@ -60,13 +60,28 @@ const NavBar = () => {
                 {links}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Movie Explorer</a>
+            <a className="btn btn-ghost text-xl">
+              {/* Movie Icon */}
+              <svg
+                className="w-8 h-8 text-purple-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
+                />
+              </svg>
+              <p className="font-bold text-xl lg:text-2xl xl:text-3xl">
+                Movie <span className="text-red-500 ">Explorer</span>
+              </p>
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
-          </div>
-          <div className="navbar-end hidden">
-            <a className="btn">Button</a>
           </div>
         </div>
       </div>
